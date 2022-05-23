@@ -1,6 +1,6 @@
 function getDraws(input) {
-  const parsedLine = input[0].trim().replace(/[ ]{2,}/g, " ");
-  const stringLine = parsedLine.split(",");
+  const parsedLine = input[0].trim().replace(/[ ]{2,}/g, ' ');
+  const stringLine = parsedLine.split(',');
   const draws = stringLine.map((e) => parseInt(e, 10));
   return draws;
 }
@@ -9,9 +9,9 @@ function getBoards(input) {
   const boards = [];
   let newBoard = [];
   for (let i = 2; i < input.length; i += 1) {
-    if (input[i] !== "") {
-      const parsedLine = input[i].trim().replace(/[ ]{2,}/g, " ");
-      const stringLine = parsedLine.split(" ");
+    if (input[i] !== '') {
+      const parsedLine = input[i].trim().replace(/[ ]{2,}/g, ' ');
+      const stringLine = parsedLine.split(' ');
       const intLine = stringLine.map((e) => parseInt(e, 10));
       newBoard.push(intLine);
       if (newBoard.length === 5) {
